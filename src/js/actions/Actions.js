@@ -1,6 +1,12 @@
 import Constants from '../constants/Constants'
 import Dispatcher from '../dispatcher/Dispatcher'
 
+/**
+ * Basic actions for getting allt he users, editing
+ * an individual user, and saving the users back to the
+ * server
+ * @return Object
+ */
 export default {
 
   getAllUsers: function() {

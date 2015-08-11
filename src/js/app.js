@@ -4,11 +4,15 @@ import UserStore from './stores/UserStore'
 import Actions from './actions/Actions'
 import 'main.css'
 
-function getInitalState() {
-  return {
-    users: UserStore.getAllUsers().toArray()
-  }
-}
+/**
+ * State is populated in this component using
+ * the UserStore.getAllUsers() method called
+ * in getInitialState. Event listeners are registered
+ * and removed on mount/unmount respectively
+ * and the UserList component is passed the array of
+ * users for rendering
+ * @class App
+ */
 
 class App extends React.Component {
 
@@ -41,6 +45,21 @@ class App extends React.Component {
     )
   }
 
+}
+
+/**
+ * Helper function that pulls the user
+ * data from the UserStore and converts
+ * the immutable OrderedMap to an array
+ * for iteration
+ *
+ * @return {Object} component state
+ */
+
+function getInitalState() {
+  return {
+    users: UserStore.getAllUsers().toArray()
+  }
 }
 
 React.render(<App/>, document.getElementById('react'))
