@@ -1,0 +1,5 @@
+export default {
+  GET_USERS: 'GET_USERS',
+  EDIT_USER: 'EDIT_USERS',
+  SAVE_USERS: 'SAVE_USERS'
+}
